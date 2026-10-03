@@ -1,0 +1,16 @@
+# Weights of neural networks
+models/*.pt
+
+# Images and dataset labeling
+data/images/
+data/labels/
+
+# Generated reports
+results/
+runs/
+
+# System and cache files in Python
+__pycache__/
+*.pyc
+.venv/
+venv/

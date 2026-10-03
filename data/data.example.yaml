@@ -1,0 +1,7 @@
+path: "YOUR_PATH"
+
+train: images/train
+val: images/val
+
+names:
+  0: YOUR CLASS

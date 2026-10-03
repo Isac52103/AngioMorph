@@ -1,0 +1,3 @@
+model_weights: "YOUR_MODEL"
+data_yaml_path: "YOUR_PATH"            
+output_json: "YOUR_PATH"         
