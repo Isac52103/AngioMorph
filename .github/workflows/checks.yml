@@ -1,0 +1,42 @@
+name: Educational Checks
+
+# Запускать проверки при любом пуше или Pull Request в ветку homeworks
+on:
+  push:
+    branches: [ "homeworks" ]
+  pull_request:
+    branches: [ "homeworks" ]
+
+jobs:
+  validate-solutions:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Скачиваем код из репозитория на виртуальный сервер
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 2. Устанавливаем Python
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+        cache: "pip"
+
+    # 3. Устанавливаем библиотеки из вашего requirements.txt
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    # 4. Проверяем стиль кода (импорты и базовые ошибки)
+    - name: Run Ruff Linter
+      run: ruff check .
+
+    # 5. Проверяем типы данных
+    - name: Run Pyrefly Type Checker
+      run: pyrefly check .
+
+    # 6. Запускаем тесты
+    - name: Run Pytest
+      run: pytest .
