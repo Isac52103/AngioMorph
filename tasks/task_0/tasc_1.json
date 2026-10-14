@@ -1,0 +1,21 @@
+[{
+        "name": "Alex",
+        "age": 25,
+        "city": "London",
+        "tags": ["HR", "Python"]
+},{
+        "name": "Inna",
+        "age": 30,
+        "city": "Moskow",
+        "tags": ["Ml", "Python", "Rust"]
+},{
+        "name": "Anna",
+        "age": 22,
+        "city": "Berlin",
+        "tags": ["Ml", "DataScience", "Kafka"]
+},{
+        "name": "Dmitry",
+        "age": 20,
+        "city": "Liverpool",
+        "tags": ["Apache spark", "Apache pulsar", "Kafka"]
+}]
